@@ -1,0 +1,184 @@
+
+.morning {
+    /* set gradients to span through */
+    background: linear-gradient(-45deg, rgb(255, 0, 0), rgb(255, 165, 0), rgb(255, 255, 0));
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 3s ease infinite;
+	animation: Gradient 3s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}    
+}
+
+.afternoon {
+	background: linear-gradient(-45deg, rgb(2, 2, 245), rgb(5, 238, 238), rgb(241, 162, 175));
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 3s ease infinite;
+	animation: Gradient 3s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.evening {
+    background: linear-gradient(-45deg, rgba(27, 24, 24, 0), rgb(41, 37, 37));
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 3s ease infinite;
+	animation: Gradient 3s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    grid-template-rows: repeat(5, minmax(100px, 1fr));
+}
+
+#hour {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+    background: #050505;
+    color: white;
+    font-size: 70px;
+    font-family: 'Orbitron';
+    align-content: center; 
+    justify-content: center; 
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgb(85, 83, 83);
+}
+
+#minute {
+    display: grid;
+    grid-column: 3 / 4;
+    grid-row: 3 / 5;
+    background: #050505;
+    color: white;
+    font-size: 70px;
+    font-family: 'Orbitron';
+    align-content: center; 
+    justify-content: center; 
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgb(85, 83, 83);
+}
+
+#second {
+    display: grid;
+    grid-column: 4 / 5;
+    grid-row: 3 / 5;
+    background: grey;
+    background: #050505;
+    color: white;
+    font-size: 35px;
+    font-family: 'Orbitron';
+    align-content: center; 
+    justify-content: center; 
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgb(85, 83, 83);
+}
+
+#title-header {
+    display: grid;
+    grid-column: 2 / 6;
+    grid-row: 2 / 3;
+    background: #050505;
+    color: white;
+    padding: 10px;
+    font-size: 70px;
+    text-shadow: 0 0 5px rgba(173, 143, 143, 0.5);
+    font-family: 'Orbitron';
+    align-content: center;
+    justify-content: center;
+    font-stretch: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgb(85, 83, 83);
+}
+
+#day-night {
+    display: grid;
+    grid-column: 5 / 6;
+    grid-row: 3 / 5;
+    background: #050505;
+    color: white;
+    font-size: 70px;
+    font-family: 'Orbitron';
+    align-content: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgb(85, 83, 83);
+}
+
+#footer {
+    display: inline;
+    margin-left: 30%;
+    font-family: 'Orbitron';
+    letter-spacing: 5px;
+}
