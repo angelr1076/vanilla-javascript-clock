@@ -9,15 +9,10 @@ function setDate() {
     var hours = now.getHours();
     var minutes = now.getMinutes();
     var seconds = now.getSeconds();
-    console.log(hours, minutes, seconds);
 
     document.querySelector("#hour").innerHTML = hours;
     document.querySelector("#minute").innerHTML = minutes;
     document.querySelector("#second").innerHTML = seconds;
-
-    setGreeting();
-    addZero();
-    civTime();
 
 // adjust background and greeting based on the time of day
     function setGreeting() {
@@ -41,7 +36,7 @@ function setDate() {
 // change from a 24 hour clock to a 12 hour clock
     function civTime() {
         if (hours > 12) {
-            hours = "0" + (hours - 12);
+            hours = hours - 12;
             document.querySelector("#hour").innerHTML = hours;
         } 
     }
@@ -55,6 +50,13 @@ function setDate() {
         if (minutes < 10) {
             document.querySelector("#minute").innerHTML = "0" + minutes;
         } 
+
+        if (hours < 10) {
+            document.querySelector("#hour").innerHTML = "0" + hours;
+        }
     }
     
+    civTime();
+    setGreeting();
+    addZero();   
 }
