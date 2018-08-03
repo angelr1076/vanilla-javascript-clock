@@ -191,6 +191,12 @@
         font-size: 30px;
     }
 
+    #footer {
+        font-size: 15px;
+        /* align-content: center; 
+        justify-content: center;   */
+    }
+
     .container {
         display: grid;
         grid-gap: 5px;
