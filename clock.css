@@ -187,13 +187,13 @@
 }
 
 @media all and (max-width: 870px) {
-    #hour, #minute, #second, #title-header, #day-night, #footer {
-        font-size: 1.5em;
+    #hour, #minute, #second, #title-header, #day-night {
+        font-size: 30px;
     }
 
     .container {
         display: grid;
-        grid-gap: 10px;
+        grid-gap: 5px;
         grid-template-columns: repeat(6, minmax(50px, 1fr));
         grid-template-rows: repeat(6, minmax(50px, 1fr));
     }
