@@ -97,7 +97,7 @@
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(6, minmax(100px, 1fr));
-    grid-template-rows: repeat(5, minmax(100px, 1fr));
+    grid-template-rows: repeat(6, minmax(100px, 1fr));
 }
 
 #hour {
@@ -177,8 +177,24 @@
 }
 
 #footer {
-    display: inline;
-    margin-left: 30%;
+    display: grid;
+    grid-column: 2 / 6;
+    grid-row: 5 / 6;
     font-family: 'Orbitron';
+    align-content: center;
+    justify-content: center;
     letter-spacing: 5px;
+}
+
+@media all and (max-width: 870px) {
+    #hour, #minute, #second, #title-header, #day-night, #footer {
+        font-size: 1.5em;
+    }
+
+    .container {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(6, minmax(50px, 1fr));
+        grid-template-rows: repeat(6, minmax(50px, 1fr));
+    }
 }

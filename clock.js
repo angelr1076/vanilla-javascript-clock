@@ -9,6 +9,7 @@ function setDate() {
     var hours = now.getHours();
     var minutes = now.getMinutes();
     var seconds = now.getSeconds();
+    console.log(hours, minutes, seconds);
 
     document.querySelector("#hour").innerHTML = hours;
     document.querySelector("#minute").innerHTML = minutes;
@@ -24,14 +25,14 @@ function setDate() {
             document.querySelector("#day-night").innerHTML = "AM";
             document.querySelector("#title-header").innerHTML = "Good Morning!";
             document.querySelector("body").classList.add("morning");
-        } else if (hours >= 12 || hours < 18) {
+        } else if (hours >= 12 && hours < 18) {
             document.querySelector("#day-night").innerHTML = "PM";
             document.querySelector("#title-header").innerHTML = "Good Afternoon";
             document.querySelector("body").classList.add("afternoon");
-        } else if (hours >= 18 ||  hours <= 23) {
+        } else if (hours >= 18 && hours <= 23) {
             document.querySelector("#title-header").innerHTML = "Good Evening";
             document.querySelector("#day-night").innerHTML = "PM";
-            document.querySelector("body").innerHTML("evening");
+            document.querySelector("body").classList.add("evening");
         } else {
             document.querySelector("#title-header").innerHTML = "JS clock needs new batteries";
         }
