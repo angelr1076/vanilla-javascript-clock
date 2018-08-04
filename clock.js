@@ -54,13 +54,13 @@ function setDate() {
     }
 
 // change from a 24 hour clock to a 12 hour clock
-    // function civTime() {
-    //     if (hours > 12) {
-    //         document.querySelector("#hour").innerHTML = (hours - 12);
-    //     } 
-    // }
+    function civTime() {
+        if (hours > 12) {
+            document.querySelector("#hour").innerHTML = (hours - 12);
+        } 
+    }
     
-    // civTime();
+    civTime();
     setGreeting();
     addZero();
     addZeroToMin();
