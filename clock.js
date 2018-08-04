@@ -23,40 +23,46 @@ function setDate() {
             console.log(hours);
         } else if (hours >= 12 && hours < 18) {
             document.querySelector("#day-night").innerHTML = "PM";
-            document.querySelector("#title-header").innerHTML = "Good Afternoon";
+            document.querySelector("#title-header").innerHTML = "Good Afternoon!";
             document.querySelector("body").classList.add("afternoon");
         } else if (hours >= 18 && hours <= 23) {
             document.querySelector("#day-night").innerHTML = "PM";
-            document.querySelector("#title-header").innerHTML = "Good Evening";
+            document.querySelector("#title-header").innerHTML = "Good Evening!";
             document.querySelector("body").classList.add("evening");
         } else {
             document.querySelector("#title-header").innerHTML = "JS clock needs new batteries";
         }
     }
 
-// change from a 24 hour clock to a 12 hour clock
-    function civTime() {
-        if (hours > 12) {
-            document.querySelector("#hour").innerHTML = (hours - 12);
+    // add zeroes to minutes and/or seconds if the value is below 10
+    function addZero() {
+        if (seconds < 10){
+            document.querySelector("#second").innerHTML = "0" + seconds;
         } 
     }
 
-// add zeroes to minutes and/or seconds if the value is below 10
-    function addZero() {
-        if (seconds < 10) {
-            document.querySelector("#second").innerHTML = "0" + seconds;
-        } 
-
+    function addZeroToMin() {
         if (minutes < 10) {
             document.querySelector("#minute").innerHTML = "0" + minutes;
         } 
+    }
 
-        if (hours < 10) {
-            document.querySelector("#hour").innerHTML = "0" + hours;
+    function addZeroToHour() {
+        if (hours < 22) {
+            document.querySelector("#hour").innerHTML = "0" + (hours - 12);
         }
     }
+
+// change from a 24 hour clock to a 12 hour clock
+    // function civTime() {
+    //     if (hours > 12) {
+    //         document.querySelector("#hour").innerHTML = (hours - 12);
+    //     } 
+    // }
     
-    civTime();
+    // civTime();
     setGreeting();
-    addZero();   
+    addZero();
+    addZeroToMin();
+    addZeroToHour();   
 }
