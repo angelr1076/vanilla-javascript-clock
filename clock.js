@@ -20,13 +20,14 @@ function setDate() {
             document.querySelector("#day-night").innerHTML = "AM";
             document.querySelector("#title-header").innerHTML = "Good Morning!";
             document.querySelector("body").classList.add("morning");
+            console.log(hours);
         } else if (hours >= 12 && hours < 18) {
             document.querySelector("#day-night").innerHTML = "PM";
             document.querySelector("#title-header").innerHTML = "Good Afternoon";
             document.querySelector("body").classList.add("afternoon");
         } else if (hours >= 18 && hours <= 23) {
-            document.querySelector("#title-header").innerHTML = "Good Evening";
             document.querySelector("#day-night").innerHTML = "PM";
+            document.querySelector("#title-header").innerHTML = "Good Evening";
             document.querySelector("body").classList.add("evening");
         } else {
             document.querySelector("#title-header").innerHTML = "JS clock needs new batteries";
@@ -36,8 +37,7 @@ function setDate() {
 // change from a 24 hour clock to a 12 hour clock
     function civTime() {
         if (hours > 12) {
-            hours = hours - 12;
-            document.querySelector("#hour").innerHTML = hours;
+            document.querySelector("#hour").innerHTML = (hours - 12);
         } 
     }
 
