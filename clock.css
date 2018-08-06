@@ -63,10 +63,10 @@
 }
 
 .evening {
-    background: linear-gradient(-45deg, #1b181800, #292525, #37237e, rgb(62, 0, 80), #242121);
+    background: linear-gradient(-45deg, #1b181800, #292525, #37237e, rgb(62, 0, 80), #242121, #000000);
 	background-size: 400% 400%;
-	-webkit-animation: Gradient 3s ease infinite;
-	animation: Gradient 3s ease infinite;
+	-webkit-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
 }
 
 @-webkit-keyframes Gradient {
@@ -193,8 +193,6 @@
 
     #footer {
         font-size: 15px;
-        /* align-content: center; 
-        justify-content: center;   */
     }
 
     .container {
