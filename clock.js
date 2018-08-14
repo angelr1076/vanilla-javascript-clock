@@ -48,16 +48,14 @@ function setDate() {
 
     function addZeroToHour() {
         if (hours < 22) {
-            console.log(hours);
-            document.querySelector("#hour").innerHTML = "0" + hours;
+            document.querySelector("#hour").innerHTML = "0" + (12 - hours);
         }
     }
 
 // change from a 24 hour clock to a 12 hour clock
     function civTime() {
-        console.log(hours);
         if (hours > 12) {
-            document.querySelector("#hour").innerHTML = "0" + hours - 12;
+            document.querySelector("#hour").innerHTML = (12 - hours);
         } 
     }
     
