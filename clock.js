@@ -53,7 +53,7 @@ function setDate() {
     // }
 
     function addZeroToHour() {
-        if (hours < 22) {
+        if (hours < 10) {
             document.querySelector("#hour").innerHTML = "0" + hours;
         }
     }
