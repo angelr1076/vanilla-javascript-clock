@@ -34,12 +34,12 @@ function setDate() {
 
     function civTime() {
         if (hours > 12) {
-            document.querySelector("#hour").innerHTML = 12 - hours;
+            document.querySelector("#hour").innerHTML = hours - 12;
         } 
     }
 
     // add zeroes to minutes and/or seconds if the value is below 10
-    function addZero() {
+    function addZeroToSec() {
         if (seconds < 10){
             document.querySelector("#second").innerHTML = "0" + seconds;
         } 
@@ -50,7 +50,7 @@ function setDate() {
             document.querySelector("#minute").innerHTML = "0" + minutes;
         } 
     }
-    // }
+    
 
     function addZeroToHour() {
         if (hours < 10) {
@@ -59,11 +59,10 @@ function setDate() {
     }
 
 // change from a 24 hour clock to a 12 hour clock
-
+civTime();
+setGreeting();
+addZeroToSec();
+addZeroToMin();
+addZeroToHour();   
     
-    civTime();
-    setGreeting();
-    addZero();
-    addZeroToMin();
-    addZeroToHour();   
 }
