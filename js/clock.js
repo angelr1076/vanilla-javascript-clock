@@ -1,6 +1,6 @@
 // setDate() sets the day of the month to the date object.
 const setDate = () => {
-// new Date() uses browser's time zone and display a date as a full text string:
+    // new Date() uses browser's time zone and display a date as a full text string:
     const now = new Date();
     const hours = now.getHours();
     const minutes = now.getMinutes();
@@ -29,17 +29,17 @@ const setDate = () => {
         // change from a 24 hour clock to a 12 hour clock
         const civTime = () => {
             if (hours > 12) {
-                document.querySelector("#hour").innerHTML = `0${hours - 12}`;
+                document.querySelector("#hour").innerHTML = `${hours - 12}`;
             } 
         }
 
         // add zeroes to minutes and/or seconds if the value is below 10
         const addZeros = () => {
             if (seconds < 10){
-                document.querySelector("#second").innerHTML = "0" + seconds;
+                document.querySelector("#second").innerHTML = `0${seconds}`;
             } 
             if (minutes < 10) {
-                document.querySelector("#minute").innerHTML = "0" + minutes;
+                document.querySelector("#minute").innerHTML = `0${minutes}`;
             } 
         }
 
@@ -49,5 +49,5 @@ const setDate = () => {
     }
     buildClock();    
 }
-// setInterval() calls a function or evaluates an expression at specified intervals (in milliseconds).
-setInterval(setDate(), 1000);
+    // setInterval() calls a function or evaluates an expression at specified intervals (in milliseconds).
+setInterval(setDate, 1000);
